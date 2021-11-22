@@ -3,14 +3,13 @@ import Post from "@/components/Post"
 import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
-import Link from "next/link"
 import {sortByDate} from "@/utils/index"
 
-export default function CategoryBlogPage({posts}) {
+export default function CategoryBlogPage({posts, categoryName}) {
 
   return (
     <Layout>
-      <h1 className="text-5xl border-b-4 p-5 font-bold">Latest Posts</h1>
+      <h1 className="text-5xl border-b-4 p-5 font-bold">Posts in {categoryName}</h1>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {posts.map((post, index) => (
@@ -72,7 +71,9 @@ export async function getStaticProps({params: {category_name}}) {
 
   return {
     props: {
-      posts: categoryPosts.sort(sortByDate)
+      posts: categoryPosts.sort(sortByDate),
+      categoryName: category_name,
+
     }
   }
 }
