@@ -1,10 +1,10 @@
-import Layout from "../../../components/Layout"
-import Post from "../../../components/Post"
+import Layout from "@/components/Layout"
+import Post from "@/components/Post"
 import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
-import {sortByDate} from "../../../utils"
-import { POSTS_PER_PAGE } from "../../../config"
+import {sortByDate} from "@/utils/index"
+import { POSTS_PER_PAGE } from "@/config/index"
 import Pagination from "../../../components/Pagination"
 
 export default function BlogPage({posts, numPages, currentPage}) {

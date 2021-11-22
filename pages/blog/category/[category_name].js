@@ -6,7 +6,7 @@ import matter from "gray-matter"
 import Link from "next/link"
 import {sortByDate} from "@/utils/index"
 
-export default function HomePage({posts}) {
+export default function CategoryBlogPage({posts}) {
 
   return (
     <Layout>
@@ -17,16 +17,38 @@ export default function HomePage({posts}) {
           <Post key={index} post={post} />
         ))}
       </div>
-
-      <Link href="/blog">
-          <a className="block text-center border border-gray-500 text-gray-800 rounded-md py-4 my-5 transition duration-500 ease select-none hover:text-white hover:bg-gray-900 focus:outline-none focus:shadow-outline w-full">All Posts</a>
-      </Link>
     </Layout>
   )
 }
 
-export async function getStaticProps() {
-  //NOTE: fs module works only if you use it here with server side, otherwise it will throw an error if you try to use it client side
+//GET STATIC PATHS
+
+export async function getStaticPaths() {
+    const files = fs.readdirSync(path.join("posts"));
+
+    const categories = files.map(filename => {
+        const markdownWithMeta = fs.readFileSync(path.join("posts", filename), "utf-8");
+
+        const {data: frontmatter} = matter(markdownWithMeta);
+
+        return frontmatter.category.toLowerCase();
+    });
+
+    const paths = categories.map(category => ({
+        params: {category_name: category}
+    }))
+
+    return {
+        paths,
+        fallback: false
+    }
+}
+
+
+// GET STATIC PROPS
+
+export async function getStaticProps({params: {category_name}}) {
+
 
   const postFiles = fs.readdirSync(path.join("posts"));
 
@@ -44,9 +66,13 @@ export async function getStaticProps() {
     }
   });
 
+
+  //Filter posts by category
+  const categoryPosts = posts.filter(post => post.frontmatter.category.toLowerCase() === category_name);
+
   return {
     props: {
-      posts: posts.sort(sortByDate).slice(0, 6)
+      posts: categoryPosts.sort(sortByDate)
     }
   }
 }
