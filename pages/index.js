@@ -4,6 +4,7 @@ import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
 import Link from "next/link"
+import {sortByDate} from "../utils"
 
 export default function HomePage({posts}) {
 
@@ -45,7 +46,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      posts
+      posts: posts.sort(sortByDate).slice(0, 6)
     }
   }
 }
