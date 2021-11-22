@@ -7,7 +7,7 @@ import Link from "next/link"
 import {sortByDate} from "../../../utils"
 import { POSTS_PER_PAGE } from "../../../config"
 
-export default function BlogPage({posts}) {
+export default function BlogPage({posts, numPages, currentPage}) {
 
   return (
     <Layout>
@@ -44,8 +44,11 @@ export async function getStaticPaths() {
 }
 
 
-export async function getStaticProps() {
+export async function getStaticProps({params}) {
   //NOTE: fs module works only if you use it here with server side, otherwise it will throw an error if you try to use it client side
+
+  const page = parseInt((params && params.page_index) || 1);
+
 
   const postFiles = fs.readdirSync(path.join("posts"));
 
@@ -63,9 +66,18 @@ export async function getStaticProps() {
     }
   });
 
+
+  const numPages = Math.ceil(postFiles.length / POSTS_PER_PAGE);
+  
+  const pageIndex = page - 1;
+
+  const orderedPosts = posts.sort(sortByDate).slice(pageIndex * POSTS_PER_PAGE, (pageIndex + 1) *  POSTS_PER_PAGE)
+
   return {
     props: {
-      posts: posts.sort(sortByDate)
+      posts: orderedPosts,
+      numPages,
+      currentPage: page
     }
   }
 }
