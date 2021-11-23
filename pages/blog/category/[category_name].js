@@ -3,7 +3,7 @@ import Post from "@/components/Post"
 import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
-import {sortByDate} from "@/utils/index"
+import { getPosts } from "@/lib/posts"
 
 export default function CategoryBlogPage({posts, categoryName}) {
 
@@ -48,30 +48,14 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({params: {category_name}}) {
 
-
-  const postFiles = fs.readdirSync(path.join("posts"));
-
-  const posts = postFiles.map(filename => {
-    //this is to remove the .md extension
-    const slug = filename.replace(".md", "")
-
-    const markdownWithMeta = fs.readFileSync(path.join("posts", filename), "utf-8");
-
-    const {data: frontmatter} = matter(markdownWithMeta);
-
-    return {
-      slug,
-      frontmatter
-    }
-  });
-
+  const posts = getPosts();
 
   //Filter posts by category
   const categoryPosts = posts.filter(post => post.frontmatter.category.toLowerCase() === category_name);
 
   return {
     props: {
-      posts: categoryPosts.sort(sortByDate),
+      posts: categoryPosts,
       categoryName: category_name,
 
     }

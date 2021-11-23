@@ -1,10 +1,7 @@
 import Layout from "@/components/Layout"
 import Post from "@/components/Post"
-import fs from "fs"
-import path from "path"
-import matter from "gray-matter"
+import { getPosts } from "@/lib/posts"
 import Link from "next/link"
-import {sortByDate} from "@/utils/index"
 
 export default function HomePage({posts}) {
 
@@ -27,26 +24,9 @@ export default function HomePage({posts}) {
 
 export async function getStaticProps() {
   //NOTE: fs module works only if you use it here with server side, otherwise it will throw an error if you try to use it client side
-
-  const postFiles = fs.readdirSync(path.join("posts"));
-
-  const posts = postFiles.map(filename => {
-    //this is to remove the .md extension
-    const slug = filename.replace(".md", "")
-
-    const markdownWithMeta = fs.readFileSync(path.join("posts", filename), "utf-8");
-
-    const {data: frontmatter} = matter(markdownWithMeta);
-
-    return {
-      slug,
-      frontmatter
-    }
-  });
-
   return {
     props: {
-      posts: posts.sort(sortByDate).slice(0, 6)
+      posts: getPosts().slice(0, 6)
     }
   }
 }
