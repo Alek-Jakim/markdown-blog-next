@@ -3,11 +3,12 @@ import Link from "next/link"
 const CategoryLabel = ({children}) => {
 
     const colorKey = {
-        JavaScript: "yellow",
-        CSS: "blue",
-        Python: "green",
-        PHP: "purple",
-        Ruby: "red"
+        "Muay-Thai": "yellow",
+        Boxing: "blue",
+        BJJ: "green",
+        Karate: "purple",
+        MMA: "red",
+        Wrestling: "pink"
     }
 
     return (

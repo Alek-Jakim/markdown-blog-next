@@ -1,11 +1,11 @@
 ---
-title: 'Python Book Review'
-date: 'May 7, 2021'
-excerpt: 'In this review, we will be looking at the new Python book from Oriley'
+title: 'Ghasempour wins Iran’s third gold at World Wrestling Championships'
+date: 'May 5, 2021'
+excerpt: 'TEHRAN – Kamran Ghasempour won Iran’s third gold medal in the 2021 World Wrestling Championships.'
 cover_image: '/images/posts/img6.jpg'
-category: 'Python'
-author: 'Mike Richards'
-author_image: 'https://randomuser.me/api/portraits/men/13.jpg'
+category: 'Wrestling'
+author: 'Martha Smith'
+author_image: 'https://randomuser.me/api/portraits/women/11.jpg'
 ---
 
 <!-- Markdow generator - https://jaspervdj.be/lorem-markdownum/ -->
@@ -30,10 +30,6 @@ consequitur et quoque scinditque in. Ratis laborum instabat quaedam partem
 Phoebus, manus _partibus poenas_. Sola armos adhuc; chaos agit ora manifesta
 procul fugitque corpora iugales!
 
-    var ethics_font_drive = cycleSystemProgram + deprecatedTransferIp.ide(3) /
-            rgb + nybbleBaseband;
-    permalinkCertificateMacintosh(ergonomicsIsdnDns);
-    boot = bridgeDaemonActive;
 
 ## O contra diu
 

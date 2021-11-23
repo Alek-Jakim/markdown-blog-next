@@ -1,11 +1,11 @@
 ---
-title: 'Django Crash Course'
-date: 'May 5, 2021'
-excerpt: 'Django is a very powerful, high level Python framework for building web applications'
-cover_image: '/images/posts/img3.jpg'
-category: 'Python'
-author: 'Sam Smith'
-author_image: 'https://randomuser.me/api/portraits/men/12.jpg'
+title: 'Where are the Women in Karate? - Discussing Karate’s Macho-Man Culture'
+date: 'May 8, 2021'
+excerpt: '“It’s a man’s world.”The saying is as famous as it’s unfortunate, and holds as much weight in modern Karate as it does in society at large.'
+cover_image: '/images/posts/img5.jpg'
+category: 'Karate'
+author: 'Jesse Enkamp'
+author_image: 'https://randomuser.me/api/portraits/women/11.jpg'
 ---
 
 <!-- Markdow generator - https://jaspervdj.be/lorem-markdownum/ -->

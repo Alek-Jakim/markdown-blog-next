@@ -1,11 +1,11 @@
 ---
-title: 'Tailwind vs. Bootstrap'
-date: 'May 5, 2021'
-excerpt: 'Both Tailwind and Bootstrap are very popular CSS frameworks. In this article, we will compare them'
-cover_image: '/images/posts/img2.jpg'
-category: 'CSS'
-author: 'Jane Doe'
-author_image: 'https://randomuser.me/api/portraits/women/11.jpg'
+title: 'A Virtuoso Performance by Errol Spence'
+date: 'May 7, 2021'
+excerpt: 'The January 14 IBF welterweight title fight between Errol Spence (22-0, 19 KOs) and Lamont Peterson (35-3-1, 17 KOs, 1 KO by) marked another step in the maturation'
+cover_image: '/images/posts/img4.jpg'
+category: 'Boxing'
+author: ' Thomas Hauser'
+author_image: 'https://randomuser.me/api/portraits/men/13.jpg'
 ---
 
 <!-- Markdow generator - https://jaspervdj.be/lorem-markdownum/ -->

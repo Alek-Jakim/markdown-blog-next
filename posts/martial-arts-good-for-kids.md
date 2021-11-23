@@ -1,10 +1,10 @@
 ---
-title: "What's New In PHP 8?"
+title: "Why Mixed Martial Arts Are Good for Kids"
 date: 'May 7, 2021'
-excerpt: 'In this article we will look at some of the new features offered in version 8 of PHP'
-cover_image: '/images/posts/img4.jpg'
-category: 'PHP'
-author: 'Sara Johnson'
+excerpt: 'Here we explore the many reasons martial arts are good for children—and why you might want to consider enrolling your child in martial arts classes.'
+cover_image: '/images/posts/img3.jpg'
+category: 'MMA'
+author: 'Nathan Bernardo'
 author_image: 'https://randomuser.me/api/portraits/women/12.jpg'
 ---
 

@@ -1,11 +1,11 @@
 ---
-title: 'React Crash Course'
-date: 'May 8, 2021'
-excerpt: 'Crash course to learn the React JavaScript library. We will look at components, hooks and more'
-cover_image: '/images/posts/img5.jpg'
-category: 'JavaScript'
-author: 'Jane Doe'
-author_image: 'https://randomuser.me/api/portraits/women/11.jpg'
+title: 'The Realities of Being a Woman in BJJ'
+date: 'May 5, 2021'
+excerpt: 'Being a woman in any male dominated industry can be tough, but at times, it can depend on your approach and your attitude towards what you’re doing.'
+cover_image: '/images/posts/img1.jpg'
+category: 'BJJ'
+author: 'Sam Smith'
+author_image: 'https://randomuser.me/api/portraits/men/12.jpg'
 ---
 
 <!-- Markdow generator - https://jaspervdj.be/lorem-markdownum/ -->

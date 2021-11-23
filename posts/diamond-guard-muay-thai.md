@@ -1,14 +1,15 @@
 ---
-title: 'JavaScript Performance Tips'
-date: 'May 4, 2021'
-excerpt: 'We will look at 10 simple tips and tricks to increase the speed of your code when writing JS'
-cover_image: '/images/posts/img1.jpg'
-category: 'JavaScript'
-author: 'John Doe'
+title: 'The Muay Thai Diamond Guard – A New Guard from Old Ways'
+date: 'May 12, 2021'
+excerpt: 'a guard inspired by the Old School cross-armed boxing guard from western fighters such as Archie Moore, Gene Fullmer, Joe Frazier, Ken Norton and George Foreman'
+cover_image: '/images/posts/img7.jpg'
+category: 'Muay-Thai'
+author: 'Sylvie von Duuglas-Ittu'
 author_image: 'https://randomuser.me/api/portraits/men/11.jpg'
 ---
 
 <!-- Markdow generator - https://jaspervdj.be/lorem-markdownum/ -->
+
 
 Lorem [markdownum](http://insunt.org/inpositaque), et sanguine rutilos dixit
 nigro cornu genus duris linguae. Super hic deus ego adveniens nullumque Venerem
