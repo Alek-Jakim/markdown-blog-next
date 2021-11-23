@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react"
 import {FaSearch} from "react-icons/fa"
+import SearchResults from "./SearchResults";
 
 const Search = () => {
 
@@ -36,10 +37,11 @@ const Search = () => {
                         onChange={(e) => setSearchItem(e.target.value)}
                         placeholder="Search Posts"
                         />
-                        <FaSearch className="absolute top-0 right-0 text-black mt-3 mr-4" />
+                        <FaSearch className="absolute top-0 right-0 text-black mt-3 mr-4" style={{cursor: "pointer"}} />
                     </form>
                 </div>
             </div>
+            <SearchResults results={searchResults} />
         </div>
     )
 }

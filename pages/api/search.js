@@ -11,11 +11,15 @@ export default function handler(req, res) {
     const files = fs.readdirSync(path.join("posts"));
 
     posts = files.map(filename => {
+
+      const slug = filename.replace(".md", "");
+
       const markdownWithMetta = fs.readFileSync(path.join("posts", filename), "utf-8")
 
       const {data: frontmatter} = matter(markdownWithMetta);
 
       return {
+        slug,
         frontmatter
       }
     })
