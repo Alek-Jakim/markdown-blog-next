@@ -6,6 +6,22 @@ const Search = () => {
     const [searchItem, setSearchItem] = useState("");
     const [searchResults, setSearchResults] = useState([]);
 
+
+    useEffect(() => {
+        const getResults = async () => {
+            if(searchItem === "") {
+                setSearchResults([]);
+            } else {
+                const res = await fetch(`/api/search?q=${searchItem}`);
+                const { results } = await res.json();
+                console.log(results);
+                setSearchResults(results);
+            }
+        }
+
+        getResults();
+    }, [searchItem])
+
     return (
         <div className="relative bg-gray-600 p-4">
             <div className="container mx-auto flex items-center justify-center md:justify-end">
